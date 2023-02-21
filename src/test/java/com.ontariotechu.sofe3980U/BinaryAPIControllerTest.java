@@ -56,7 +56,7 @@ public class BinaryAPIControllerTest {
                 .andExpect(content().string("0"));
     }
     @Test
-    public void add4() throws Exception {
+    public void add4() throws Exception { /* Json no operands */
         this.mvc.perform(get("/add_json"))//.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.operand1").value(0))
@@ -65,12 +65,12 @@ public class BinaryAPIControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.operator").value("add"));
     }
     @Test
-    public void add5() throws Exception {
-        this.mvc.perform(get("/add_json").param("operand1", "101010").param("operand2", "010101"))//.andDo(print())
+    public void add5() throws Exception { /* Json 1 operand */
+        this.mvc.perform(get("/add_json").param("operand1", "101010"))//.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.operand1").value(101010))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.operand2").value(10101))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(111111))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.operand2").value(0))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.result").value(101010))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.operator").value("add"));
     }
     //Add test cases for each newly implemented operations. The test cases should cover almost all possible cases.
