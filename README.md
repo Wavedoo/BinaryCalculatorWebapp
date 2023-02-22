@@ -8,4 +8,4 @@ Nabeega Latif - 100791489 <br/>
 Abdullah Khan - 100755624 <br/>
 Sterling Gallion 100754018
 
-[Video link goes here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Video link](https://github.com/Wavedoo/BinaryCalculatorWebapp/blob/master/C3-Lab-2-Video.mp4) (Must be downloaded to view)
